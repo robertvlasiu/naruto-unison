@@ -874,4 +874,48 @@ characters =
       ]
     , [ invuln "Block" "Jiraiya" [Physical] ]
     ]
+	, Character
+    "Sasuke Rinnesharingan"
+    "The character description "
+    [LeafVillage, Sannin, Sage, TeamLeader, Fire, Wind, Earth, Water, Yin, Yang] -- some tags for character
+    [ [ Skill.new
+        { Skill.name      = "Skill 1"
+        , Skill.desc      = "Deal 20 damage and 15 piercing damage to an enemy. For 1 turn, counters applied by the target will have their duration reduced by 1 turn."
+        , Skill.classes   = [Chakra, Ranged]
+        , Skill.cost      = [Nin, Rand]
+        , Skill.effects   =
+          [ To Enemy do
+                damage 20
+                pierce 15
+                apply 1 [Throttle 1 Counters]
+          ]
+        }
+      ]
+    , [ Skill.new
+        { Skill.name      = "Skill 2"
+        , Skill.desc      = "Deals 15 damage to all enemies and becomes invulnerable to melee skills for 1 turn."
+        , Skill.classes   = [Physical, Ranged]
+        , Skill.cost      = [Tai]
+        , Skill.cooldown  = 1
+        , Skill.effects   =
+          [ To Enemies $ damage 15
+          , To Self $ apply 1 [Invulnerable Melee]
+          ]
+        }
+      ]
+    , [ Skill.new
+        { Skill.name      = "Skill 3"
+        , Skill.desc      = "Deals 45 damage and preventing them from reducing damage or becoming invulnerable for 1 turn."
+        , Skill.classes   = [Chakra, Melee]
+        , Skill.cost      = [Nin, Tai]
+        , Skill.cooldown  = 1
+        , Skill.effects   =
+          [ To Enemy do
+                damage 45
+                apply 1 [Expose]
+          ]
+        }
+      ]
+    , [ invuln "Rinnegan" "Sasuke" [Physical] ]
+    ]
   ]

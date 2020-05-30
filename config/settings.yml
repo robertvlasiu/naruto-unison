@@ -19,7 +19,7 @@ ip-from-header: "_env:YESOD_IP_FROM_HEADER:false"
 # In development, they default to the inverse.
 #
 #allow-vs-self: false
-#unlock-all: false
+unlock-all: false
 detailed-logging: false
 # should-log-all: false
 # reload-templates: false
@@ -31,12 +31,12 @@ detailed-logging: false
 # See https://github.com/yesodweb/yesod/wiki/Configuration#parsing-numeric-values-as-strings
 
 database:
-    user:     "_env:YESOD_PGUSER:naruto-unison"
-    password: "_env:YESOD_PGPASS:naruto-unison"
+    user:     "_env:YESOD_PGUSER:postgres"
+    password: "_env:YESOD_PGPASS:legendar"
     host:     "_env:YESOD_PGHOST:localhost"
     port:     "_env:YESOD_PGPORT:5432"
     # See config/test-settings.yml for an override during tests
-    database: "_env:YESOD_PGDATABASE:naruto-unison"
+    database: "_env:YESOD_PGDATABASE:naruto-arena"
     poolsize: "_env:YESOD_PGPOOLSIZE:10"
 
 copyright: BSD-3
