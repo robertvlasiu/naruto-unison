@@ -239,15 +239,11 @@ missions =
       "Kill 10 enemies with [Eight Trigrams Sixty-Four Palms]." $
       HookAction "Neji Hyūga" "Eight Trigrams Sixty-Four Palms"
       kill
-
-    , Reach 4 Match
+	  
+	, Reach 1 Career
       "Use all 4 skills in 4 consecutive turns." $
       Consecutive "Neji Hyūga"
-      [ "Gentle Fist"
-      , "Eight Trigrams Palm Rotation"
-      , "Eight Trigrams Sixty-Four Palms"
-      , "Byakugan Foresight"
-      ]
+      ["Gentle Fist", "Eight Trigrams Palm Rotation", "Eight Trigrams Sixty-Four Palms", "Byakugan Foresight"]
     ]
   , Mission
     "Kazekage Gaara (S)"
